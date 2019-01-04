@@ -58,7 +58,9 @@
   </div>
 
   <script type="text/javascript">
-    $("#search-btn").on("click", function() {
+    $("#search-btn").on("click", function(event) {
+
+      event.preventDefault();
       var searchedCharacter = $("#character-search").val().trim();
 
       // Using a RegEx Pattern to remove spaces from searchedCharacter
